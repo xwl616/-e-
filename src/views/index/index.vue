@@ -5,7 +5,7 @@
             <div class="img-left">
                 <img src="../../assets/logo.png" class="herder-img">
             </div>
-            <router-link to="/login" class="herder-a">登录</router-link>
+            <router-link to="/login" class="herder-a" >登录</router-link>
         </div>
         <div class="swipe">
             <router-link to="">
@@ -95,6 +95,7 @@ export default {
             },
             swipeList: []
         }
+
     },
     components: {
         teas,

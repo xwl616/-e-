@@ -1,16 +1,13 @@
 <template>
   <div id="app">
     <router-view/>
-    
     <upper></upper>
   </div>
 </template>
 <script>
-import teas  from "@/components/teas";
 import upper from "@/components/upper"
 export default {
   components: {
-    
     upper
   },
   computed: {

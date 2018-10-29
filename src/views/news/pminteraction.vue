@@ -41,7 +41,6 @@
         methods:{
             getData(){
                 this.$axios.fetch('get','/forum/forumList.do?page=1&rows=10&type=0&cates=0').then(res => {
-                    console.log(res)
                     if(res.code == 1){
                         this.pminteractionList = res.rows
                     }

@@ -30,7 +30,6 @@
         methods: {
             getData(){
                 this.$axios.fetch('get','/news/newsList.do?page=1&rows=10').then(res => {
-                    console.log(res)
                     if(res.code == 1){
                         this.wawpList = res.rows
                     }

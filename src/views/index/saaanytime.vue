@@ -21,7 +21,6 @@
         methods:{
             getData(){
                 this.$axios.fetch('get','/news/newsList.do?page=1&rows=10&type=7').then(res => {
-                    console.log(res)
                     if(res.code == 1){
                         this.saaanytimeList = res.rows
                     }

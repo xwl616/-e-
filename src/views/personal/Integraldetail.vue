@@ -13,17 +13,35 @@
 </template>
 
 <script>
+import axios from 'axios'
     export default {
         data(){
             return{
-                
+                token: '',
+                params: {
+                    page: 1,
+                    rows: 10
+                }
             }
         },
         methods: {
-            getData(){
-                this.$axios.fetch('get','/integral/integralList.do?page=1&rows=10').then(res => {
-                    
+            getData(){  
+                this.token = this.$store.state.token
+                let token = this.token
+                console.log(token)
+                let config = {
+                    headers: {
+                        'token': token
+                    }
+                }
+                var url = `http://211.67.177.56:8080/hhdj/integral/integralList.do?`
+                axios.get(url, {params: {page: 1, rows: 10}},  config ).then(res => {
+                    console.log(res)
                 })
+                // this.$axios.fetch('get','/integral/integralList.do?', this.params,
+                //  config).then(res => {
+                //     console.log(res)
+                // })
             }
         },
         created() {

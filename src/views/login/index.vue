@@ -39,9 +39,9 @@ import { Indicator } from 'mint-ui';
                 });
                 const FormData = this.qs.stringify(this.formData)
                 this.$axios.fetch('post',`/user/userLogin.do?${FormData}`).then(res=>{
-                    console.log(res)
                     if(res.code == 1){
                         this.$store.commit("GET_USERDATA",res.data)
+                        // this.$store.commit("GET_TOKEN",res.token)
                         localStorage.setItem('token', res.token)
                         Indicator.close()
                         Toast({

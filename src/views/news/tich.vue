@@ -1,6 +1,6 @@
 <template>
     <div class="tich above">
-        <div v-html="content">
+        <div id="box" v-html="content">
 
         </div>
     </div>
@@ -35,6 +35,27 @@ import cheerio from 'cheerio'
     }
 </script>
 
-<style scoped lang='scss'>
-
+<style>
+.tich{
+    width: 100%;
+    height: 100%;
+}
+#box{
+    padding: 10px;
+}
+h1{
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+h2{
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 550;
+    margin-bottom: 10px
+}
+p{
+    line-height: 2;
+}
 </style>

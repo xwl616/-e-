@@ -8,7 +8,8 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
     state:{
         isLoading: false,
-        userData:{}
+        userData:{},
+        // token: ''
     },
     mutations:{
         "LOADING" (state,val){
@@ -16,7 +17,10 @@ const store = new Vuex.Store({
         },
         "GET_USERDATA"(state,val){
             state.userData=val
-        }
+        },
+        // "GET_TOKEN"(state,val){
+        //     state.token = val
+        // }
     },
     actions:{
 
